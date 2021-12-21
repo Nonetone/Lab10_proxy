@@ -1,0 +1,11 @@
+<%= form_tag url_for(controller: :proxy, action: :output), method: 'get' do %> 
+<<%= %>>
+<%= label_tag("Введите n:") %>
+<%= number_field_tag(:number) %> <br/><br/>
+<select class="custom-select" name = "side">
+ <option value = "server">Server XSLT</option>
+ <option value = "client-with-xslt">Client XSLT</option>
+ <option value = "client">RAW</option>
+ </select> 
+ <%= submit_tag("Найти счастливые") %>
+<% end %>
